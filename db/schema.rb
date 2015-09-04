@@ -11,17 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150904011920) do
+ActiveRecord::Schema.define(version: 20150904053552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "loans", force: :cascade do |t|
-    t.decimal  "amount",        precision: 8, scale: 2
-    t.decimal  "downpayment",   precision: 8, scale: 2
-    t.decimal  "interest_rate", precision: 8, scale: 2
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.decimal  "amount",                precision: 8, scale: 2
+    t.decimal  "downpayment",           precision: 8, scale: 2
+    t.decimal  "interest_rate",         precision: 8, scale: 2
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
   end
 
 end

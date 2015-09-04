@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
 gem 'rails', '4.2.4'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'paperclip'
 gem 'aws-sdk'
@@ -14,7 +15,6 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
 
 group :development, :test do
   gem 'byebug'
