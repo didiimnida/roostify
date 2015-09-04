@@ -41,5 +41,4 @@ class LoanPdf < Prawn::Document
   def price(num)
     @view.number_to_currency(num)
   end
-
 end

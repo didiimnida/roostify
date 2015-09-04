@@ -11,8 +11,8 @@ class LoansController < ApplicationController
   def create
     @loans = Loan.all
     @loan = Loan.create(loan_params)
-    pdf = LoanPdf.new(@loan, view_context)
-    pdf.render_file("loan.pdf")
+    # pdf = LoanPdf.new(@loan, view_context)
+    # pdf.render_file("loan.pdf")
   end
 
   def show
