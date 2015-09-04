@@ -1,0 +1,6 @@
+<%=@loan.id%>
+<% if @loan.document_content_type == 'application/pdf' %>
+    <p>
+     <%= link_to 'My PDF', @loan.document.url %>
+   </p>
+<% end %>
