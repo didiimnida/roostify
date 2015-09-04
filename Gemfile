@@ -3,6 +3,7 @@ ruby '2.2.2'
 gem 'rails', '4.2.4'
 
 gem 'paperclip'
+gem 'aws-sdk'
 gem 'pg'
 gem 'devise'
 gem 'sass-rails', '~> 5.0'
