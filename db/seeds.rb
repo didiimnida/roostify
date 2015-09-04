@@ -9,9 +9,9 @@
 Loan.delete_all
 
 Loan.create!([
-  {id: 1, amount: 500.00, downpayment: 25.20, interest_rate: 4.55},
-  {id: 2, amount: 4000.00, downpayment: 9.10, interest_rate: 0.55},
-  {id: 3, amount: 30000.00, downpayment: 25222.00, interest_rate: 1.55},
-  {id: 4, amount: 6000.00, downpayment: 2341.00, interest_rate: 2.54},
-  {id: 5, amount: 70000.00, downpayment: 30900.30, interest_rate: 12.25}
+  {amount: 500.00, downpayment: 25.20, interest_rate: 4.55},
+  {amount: 4000.00, downpayment: 9.10, interest_rate: 0.55},
+  {amount: 30000.00, downpayment: 25222.00, interest_rate: 1.55},
+  {amount: 6000.00, downpayment: 2341.00, interest_rate: 2.54},
+  {amount: 70000.00, downpayment: 30900.30, interest_rate: 12.25}
 ])
