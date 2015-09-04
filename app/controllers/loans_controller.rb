@@ -11,21 +11,24 @@ class LoansController < ApplicationController
   def create
     @loans = Loan.all
     @loan = Loan.create(loan_params)
-    # pdf = LoanPdf.new(@loan, view_context)
-    # pdf.render_file("loan.pdf")
+    pdf = LoanPdf.new(@loan, view_context)
+    pdf.render_file("/tmp/loan.pdf")
+    pdf_file = File.open('/tmp/loan.pdf')
+    @loan.document = pdf_file
+    @loan.save
   end
 
   def show
     @loan = Loan.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.pdf do
-        pdf = LoanPdf.new(@loan, view_context)
-        send_data pdf.render, filename: "loan_#{@loan.id}.pdf",
-                              type: "application/pdf",
-                              disposition: "inline"
-      end
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.pdf do
+    #     pdf = LoanPdf.new(@loan, view_context)
+    #     send_data pdf.render, filename: "loan_#{@loan.id}.pdf",
+    #                           type: "application/pdf",
+    #                           disposition: "inline"
+    #   end
+    # end
   end
 
   # Edit, Update, Delete NOT requirements for this app.
