@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="well">
+    <%= link_to "New Loan", new_loan_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-loan"></div>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Amount</th>
+        <th>Downpayment</th>
+        <th>Interest Rate</th>
+        <td>&nbsp;</td>
+      </tr>
+    </thead>
+    <tbody class="loan-index">
+      <%= render "index" %>
+    </tbody>
+  </table>
+</div>
+<div id="loan-modal" class="modal fade"></div>
