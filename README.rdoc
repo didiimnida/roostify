@@ -2,10 +2,18 @@ This application allows a borrower to create and display loan information.
 Loan information is displayed in a table and is available for viewing in PDF format.
 
 Ruby Version 2.2.2
+
 Rails 4.2.4
+
 Heroku Deployment
+
 Devise Authentication
+
 Rspec/Capybara for Testing
+
 Paperclip + AWS Storage
+
 Prawn for creating PDF files
+
 Mailer used for sending pdf to user.
+
