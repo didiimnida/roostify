@@ -4,6 +4,6 @@
     <td><%= number_to_currency loan.amount %></td>
     <td><%= number_to_currency loan.downpayment %></td>
     <td><%= loan.interest_rate %></td>
-    <td><%= link_to "View", loan_path(loan), remote: true, class: "btn btn-danger" %></td>
+    <td><%= link_to "View", loan_path(loan, format: "pdf"), class: "btn btn-danger" %></td>
   </tr>
 <% end %>

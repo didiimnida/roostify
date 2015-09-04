@@ -5,6 +5,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'prawn'
+
 gem 'pg'
 gem 'devise'
 gem 'sass-rails', '~> 5.0'
