@@ -1,0 +1,29 @@
+.form-container {
+  max-width: 400px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #4A444D;
+  @include border-top-radius(10px);
+  @include border-bottom-radius(10px);
+  h2 {
+    padding: 15px;
+    text-align: center;
+  }
+  input[type="text"], input[type="email"], input[type="password"] {
+    @extend .form-control;
+  }
+  input[type="checkbox"] {
+    padding: 20px;
+  }
+  input[type="submit"] {
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .form-control;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  a {
+    margin-bottom: 25px;
+  }
+}

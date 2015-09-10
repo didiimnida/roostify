@@ -1,4 +1,6 @@
 class Loan < ActiveRecord::Base
+  belongs_to :users
+
   validates :amount, presence: true,
             numericality: true
   validates :downpayment, presence: true,
