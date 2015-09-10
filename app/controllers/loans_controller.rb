@@ -1,7 +1,7 @@
 class LoansController < ApplicationController
 
   def index
-    @loans = Loan.all
+    @loans = current_user.loans
   end
 
   def new
@@ -9,11 +9,12 @@ class LoansController < ApplicationController
   end
 
   def create
-    @loans = Loan.all
+    @loans = current_user.loans
     @loan = Loan.create(loan_params)
     pdf = LoanPdf.new(@loan, view_context)
     pdf.render_file("/tmp/loan.pdf")
     pdf_file = File.open('/tmp/loan.pdf')
+    @loan.user_id = current_user.id
     @loan.document = pdf_file
     @loan.save
   end
