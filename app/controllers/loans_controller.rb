@@ -20,7 +20,7 @@ class LoansController < ApplicationController
   end
 
   def show
-    @loan = Loan.find(params[:id])
+    @loan = current_user.loans.find(params[:id])
 
     #Generate new PDF (send format through as pdf from view):
     # respond_to do |format|
