@@ -4,18 +4,19 @@ Loan information is displayed in a table and is available for viewing in PDF for
 Requirements:
 
 Ruby Version 2.2.2 (X)
+
 Rails 4.2.4 (X)
 
 Heroku Deployment (X)
 
 Devise Authentication (X)
- a.) Users can only see loans they create. (X)
 
-Paperclip + AWS Storage (X)
-Prawn for creating PDF files (X)
- a.) Users will see pdf file stored on AWS on clicking "View" button. (X)
+Users can only see loans they create. (X)
 
-Mailer used for sending pdf to user.
+Paperclip + AWS Storage (X) +  Prawn for creating PDF files (X)
+
+Users will see pdf file stored on AWS on clicking "View" button. (X)
+
+Ruby Mailer used to send pdf to user upon loan creation.
 
 Rspec/Capybara for Testing
-
