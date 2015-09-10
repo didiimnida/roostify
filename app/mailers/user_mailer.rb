@@ -2,8 +2,8 @@ class UserMailer < ApplicationMailer
 
   default from: "diana.hilton@gmail.com"
 
-  def welcome_email(user)
+  def loan_email(user)
     @user = user
-    mail(to: @user.email, subject: "Welcome to Dianaify")
+    mail(to: @user.email, subject: "Your loan has been approved by Dianaify!")
   end
 end

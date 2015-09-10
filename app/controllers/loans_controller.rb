@@ -17,11 +17,11 @@ class LoansController < ApplicationController
     @loan.user_id = current_user.id
     @loan.document = pdf_file
     @loan.save
-    UserMailer.welcome_email(current_user).deliver_now
+    # UserMailer.loan_email(current_user).deliver_later
   end
 
-  def show
-    @loan = current_user.loans.find(params[:id])
+  # def show
+  #   @loan = current_user.loans.find(params[:id])
 
     #Generate new PDF (send format through as pdf from view):
     # respond_to do |format|
@@ -33,7 +33,7 @@ class LoansController < ApplicationController
     #                           disposition: "inline"
     #   end
     # end
-  end
+  # end
 
   # Edit, Update, Delete NOT requirements for this app.
 
