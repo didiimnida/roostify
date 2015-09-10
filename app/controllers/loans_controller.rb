@@ -17,6 +17,7 @@ class LoansController < ApplicationController
     @loan.user_id = current_user.id
     @loan.document = pdf_file
     @loan.save
+    UserMailer.welcome_email(current_user).deliver_now
   end
 
   def show
