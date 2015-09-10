@@ -13,7 +13,7 @@ Devise Authentication (X)
 
 Users can only see loans they create. (X)
 
-Paperclip + AWS Storage (X) +  Prawn for creating PDF files (X)
+Paperclip + AWS Storage +  Prawn for creating PDF files (X)
 
 Users will see pdf file stored on AWS on clicking "View" button. (X)
 
